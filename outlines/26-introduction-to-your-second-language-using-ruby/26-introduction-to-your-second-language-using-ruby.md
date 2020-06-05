@@ -1,4 +1,4 @@
-<img src="sexy.jpg" style="width: 100%" />
+<img src="sexy.jpg" width=" 100%" />
 
 # Introduction to Another Language using Ruby
 
@@ -190,10 +190,11 @@ __First Steps__
 __IRB Practice__
 1. Try adding subtracting multiplying and dividing
 2. Try storing values in variables and running some operations on them
-3. Become comfortable with IRB because we will be using it a lot
-4. Try requiring the `hello_world.rb` file
-5. What happened when you required it?
-6. Name the differences and similarities between javascript and ruby console?
+3. Try requiring the `hello_world.rb` file
+4. What happened when you required it?
+5. Name the differences and similarities between javascript and ruby console?
+
+__Become comfortable with IRB because we will be using it a lot__
 
 __Basics__
 1. Create a new file named `basics.rb`, write code to do the following:
@@ -250,6 +251,15 @@ numbers[-2] # 9
 numbers[3..8] # [4,5,6,7,8,9]
 ```
 
+```ruby
+prefix = %w{orlando is my name}
+suffix = %w{teaching is my game}
+
+[*prefix, *suffix] # ["orlando", "is", "my", "name", "teaching", "is", "my", "game"]
+```
+
+[Splats](http://blog.honeybadger.io/ruby-splat-array-manipulation-destructuring/)
+
 ## Comparison Operators
 
 ```ruby
@@ -258,7 +268,6 @@ number = 5
 number > 3 # true
 number < -9 # false
 number == "5" # false
-number === "5" # also false; does not mean the same thing as in js
 
 number > 3 && number < 10 # true
 number > 3 and number < 10 # true, avoid using this
@@ -424,14 +433,15 @@ numbers.map do |element|
   element + 1
 end
 
+# the original array has not changed
 numbers # [1,2,3,4,5]
 
-# returns the same array as before,
-#   now modified
+# modifies the original array
 numbers.map! do |element|
   element + 1
 end
 
+# the original array has changed
 numbers # [2,3,4,5,6]
 ```
 
@@ -445,9 +455,13 @@ __Functions__
 5. Name some advantages and disadvantages of this approach.
 6. Change the code to only divide when the second argument is greater than or equal to `1` otherwise display the text `"Second argument must be greater than or equal to 1"` to the console.
 
-# Ruby Core Library
+# Resources
 
-[Ruby Docs](http://ruby-doc.org/)
+- [Ruby Docs](http://ruby-doc.org/)
+- [RVM Basics](https://rvm.io/rvm/basics)
+- [Codeacademy: Ruby](https://www.codecademy.com/learn/learn-ruby)
+- [Launchschool: Intro to Ruby](https://launchschool.com/books/ruby/read/introduction)
+- [Erik Trautman: Everything in Ruby is an Object](https://www.eriktrautman.com/posts/ruby-explained-objects-and-methods)
 
 ## Workshop
 

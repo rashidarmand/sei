@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Pages</title>
+  <link rel="stylesheet" href="main.css">
+</head>
+<body>
+  <nav>
+    <a href="/">Home</a>
+    <a href="/users">Users</a>
+
+    <!-- check if the user is logged in -->
+    <% if session[:user_id] %>
+      <!-- 
+        if the user is logged in then
+          provide them with the option to log out
+      -->
+      <a href="/logout">Logout</a>
+    <% else %>
+      <!-- 
+        if the user is logged out then
+          provide them with the option to sign up or login
+      -->
+      <a href="/signup">Signup</a>
+      <a href="/signin">Signin</a>
+    <% end %>
+  </nav>
+
+  <!-- 
+    Check if the user has set a flash message then display it
+  -->
+  <% if flash[:info] %>
+    <!-- 
+      display a flash info message if its been set in the route
+    -->
+    <div id="flash-info">
+      <%= flash[:info] %>
+    </div>
+  <% end %>
+
+  <% if flash[:error] %>
+    <!-- 
+      display a flash error message if its been set in the route
+    -->
+    <div id="flash-error">
+      <%= flash[:error] %>
+    </div>
+  <% end %>
+
+  <%= yield %>
+</body>
+</html>

@@ -1,4 +1,5 @@
-![Hacking](hacking.jpg)
+<img src="hacking.jpg" width="100%" />
+
 # Introduction to Programming
 
 ## What is programming?
@@ -17,13 +18,6 @@ You program several things already in your life:
   - Thru your own beliefs
   - How you solve problems (algorithms)
 
-You have been programmed in the past:
-- Advertisements
-- Music
-- Society
-- Education
-  - I am programming you to be engineers ;-)
-
 ## Programming Languages
 
 _Programming languages give you a toolset to define the behavior of a program using words (most of the time English)._
@@ -38,6 +32,9 @@ Examples
 - C#
 - PHP
 - R
+- Lisp
+- Prolog
+- Ada
 - etc...
 
 ## Keywords
@@ -59,12 +56,6 @@ Just remember that all keywords programming language keywords are most likely al
 
 ## Logic
 
-![Logic](logic.jpg)
-
-^ Dope rapper!
-
-### What is logic exactly (aside from a rapper)?
-
 _Code that dictates the behavior of your programs / applications_
 
 Understanding programming logic allows you to:
@@ -79,7 +70,7 @@ __How would you make a peanut butter and jelly sandwich?__
 
 ### What is it?
 
-_A language used on the browser for the purposes of adding behavior to a webpage._
+_A language used on the browser and on the server for the purposes of adding behavior to a webpage or executing complex server side behavior._
 
 
 ### Yo dawg, I heard you like ECMAScript
@@ -129,13 +120,34 @@ alert("Hello!");
 <button onClick="alert('hello');">
 ```
 
----
+#### Terminal (using nodejs)
+
+```bash
+$ node [name of js file]
+```
+
+[NodeJS: Download](https://nodejs.org/en/download/)
+
+#### NodeJS Console
+
+```bash
+$ node
+> [you can write js code here line by line]
+```
 
 #### Exercise
 
-- Create a script using JS that will alert a user with “Welcome to NYCDA, This is your first Javascript!”
+Create a new javascript file called `main.js` with the following code:
 
----
+```js
+console.log("Hello there!")
+```
+
+Now run this script on the terminal by running the following command:
+
+```bash
+$ node main.js
+```
 
 ### Basic Syntax
 
@@ -214,15 +226,12 @@ true
 false
 ```
 
----
 #### Exercise
 
 - Create a string variable called test and give it a value of your name
 - Create another variable called myAge and give it a value of your age 
 - Add those two together and see what happens! Do you get a string or a number back? How about if we add a number and a boolean?
 - What data type could be used to store both name and age in one variable?
-
----
 
 ##### Array
 
@@ -246,15 +255,21 @@ let ticTacToe = [
 ]
 
 ticTacToe[1][2] // x (second row, third column)
+
+// destructuring
+let [one, two, three, four] = listOfFood
+
+one // carrots
+two // bacon
+three // milk
+four // parsley
 ```
 
----
 #### Exercise
 
-- Create an array with the name of 5 of your classmates (If you don’t remember than ask!)
-- Access the classmate in the 4th position of your array
-
-Given the following multidimensional array: 
+1. Create an array with the name of 5 of your classmates (If you don’t remember than ask!)
+2. Access the classmate in the 4th position of your array
+3. Given the following multidimensional array: 
 ```js
 [
   ["hello", "goodbye", "food"],
@@ -262,9 +277,7 @@ Given the following multidimensional array:
   ["beans", "fruit", "veggies"]
 ]
 ```
-Access the array and return the element that contains ‘beans’
-
----
+Access the array and return the element that contains `beans`
 
 ##### Object Literals
 
@@ -283,10 +296,11 @@ let person = {
 person.firstName // Orlando
 person["lastName"] // Caraballo
 person.favoriteMovies[1] // The Matrix
+person.age // 34
+
 person["age"] = 24 // age is reset to 24
-person["ethnicity"] = "dominican" // adds a new key 'ethnicity' with value 'dominican'
+person["ethnicity"] = "Dominican" // adds a new key 'ethnicity' with value 'Dominican'
 ```
----
 
 #### Exercise
 
@@ -296,7 +310,6 @@ person["ethnicity"] = "dominican" // adds a new key 'ethnicity' with value 'domi
 - Assign some movie values to your keys!
 - Access your object literal and print out in the console the following string:
   - My favorite movies are `topMovieOne` and `topMovieTwo`, but I really enjoy `topMovieThree`.
----
 
 ### Operators
 
@@ -383,15 +396,13 @@ number // 5
 10 % 3 // 1
 ```
 
----
 #### Exercise
 
 - Create a variable called `mathOne` and give it a value of `20`
 - Create another one called `mathTwo` and give it a value of `3`.  
 - Create a new variable called `mathSum` that will be the sum of the first variables. 
 - Create another variabled called `mathProduct` and this will be the product of the first two variables.
-- Print `mathSum` and `mathProduct` to your developer console.
----
+- Print `mathSum` and `mathProduct` to your console.
 
 #### Conditional Operators
 
@@ -515,6 +526,7 @@ let name = "orlando"
 console.log(name + " is my name")
 
 // displays this as a popup
+// only works on the browser
 alert(name + " is my name, programming is my game")
 ```
 
@@ -566,7 +578,7 @@ while(number <= 15) {
   This can be used to loop over arrays but for loops are more clear
 */
 ```
----
+
 #### Exercise
 
 Create a for loop that will print out pluses starting with 10 of them down to one. 
@@ -586,8 +598,6 @@ Example:
 +
 ```
 
----
-
 #### Exercise
 
 - Write a conditional that checks if a variable is less than 10. If it is, alert the user that their variable is less than 10. If it is not, let the user know what the variable was and that it was greater than 10.
@@ -598,8 +608,6 @@ If the temperature is warmer than 80, and the air conditioner is off, log "turn 
  If the temperature is warmer than 80 and the ac is on, log "this thing is broken!". 
 If the temperature is colder than 60 and the air conditioner is on, log "brrr, turn this thing off".
 If the temperature is cooler than 80, and the ac is off, log "not worth the electricity. leave it off." 
-
----
 
 ## Workshop
 

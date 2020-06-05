@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="/main.css">
+  <script src="/main.js" defer></script>
+</head>
+<body>
+  <nav>
+    <a href="/">Homepage</a>
+    <a href="/groceries?name=orlando&age=35">Groceries</a>
+    <a href="/groceries/1">First Food Item</a>
+    <a href="/groceries/2">Second Food Item</a>
+    <a href="/groceries/3">Third Food Item</a>
+    <a href="/groceries/4">Fourth Food Item</a>
+  </nav>
+
+  <%= yield %>
+</body>
+</html>

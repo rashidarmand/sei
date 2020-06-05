@@ -1,0 +1,30 @@
+#container {
+  height: 400px;
+  background-color: gray;
+}
+
+.box {
+  height: 300px;
+  width: 25%;
+  background-color: lightblue;
+  display: inline-block;
+  opacity: 1;
+  animation: backgroundChange;
+  animation-duration: 1s;
+}
+
+.box:hover {
+/*   background-color: red; */
+/*   opacity: 0; */
+}
+
+@keyframes backgroundChange {
+  from {
+    background-color: lightblue;
+  }
+  
+  to {
+    background-color: lightblue;
+  }
+}
+

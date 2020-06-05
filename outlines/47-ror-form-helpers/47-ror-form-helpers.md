@@ -25,7 +25,7 @@ Judging by the location of where this form will go, this should create a new pos
 
 ```ruby
 # routes.rb
-get "/posts", to: "posts#new"
+get "/posts/new", to: "posts#new"
 post "/posts", to: "posts#create"
 ```
 
@@ -190,6 +190,8 @@ Which roughly generates the following html:
   <input type="submit" value="Submit" />
 </form>
 ```
+
+[Patrick On Rails: Form Tag vs Form For vs Form With](https://m.patrikonrails.com/rails-5-1s-form-with-vs-old-form-helpers-3a5f72a8c78a)
 
 ## Other View Helpers
 

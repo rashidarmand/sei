@@ -1,0 +1,23 @@
+@import "variables";
+@import "buttons";
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin-left: .5em;
+  border: $border-shorthand;
+  
+  li {
+    font-size: 1.5em;
+    
+    a {
+      color: $main-color;
+      font-family: $main-font-family;
+    }
+    
+    p {
+      text-align: right;
+      font-family: $main-font-family;
+    }
+  }
+}

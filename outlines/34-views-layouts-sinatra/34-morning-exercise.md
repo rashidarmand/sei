@@ -1,3 +1,5 @@
+<img src="morning-exercise.jpg" width="100%">
+
 # Morning Exercise
 
 Recreate the `.each` behavior in ruby by creating a method on Array called `.far_each`. This method loops through all elements in an array and facilitates the ability for a user to have access to the current element of a loop on every iteration.
@@ -31,7 +33,12 @@ Here is some starter code for the ruby implementation:
 class Array
   def far_each
     # your implementation goes here
-    #   remember you are being passed in a block
+    
+    # remember you are being passed in a block
+
+    # blocks can be executed by utilizing the yield command
+    
+    # the array being looped over is represented by the self keyword much like this represents the array in javascript
   end
 end
 

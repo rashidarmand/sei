@@ -44,7 +44,7 @@ Much like the problem above, solving code challenges can have multiple solutions
 3. Identify the tools you have at your disposal
     - _What functions can I use?_
 4. Identify if your blocks
-    - _Should I look to strengthen my knowledge of closures?_
+    - _Should I look to strengthen my knowledge of functions?_
     - _Am I missing some information?_
 5. Formulate your strategy
     - _How am I going to approach this?_
@@ -57,13 +57,13 @@ __Note: If you have not at least thought through the steps 1 - 5 above, do not s
 
 ---
 
-## _¿What are some of your approaches for solving problems?_
+## _¿What are some of your approaches for solving programming problems?_
 
 ---
 
 ## Problem
 
-_You are really hungry today so you decide to head to the grocery store to buy some supplies to cook some food for yourself. You managed to quickly scrounge together a grocery list to use for keeping yourself focused on buying only what you have written down. There are 15 aisles in the grovery store. In words, how would you go about searching for your groceries?_
+_You are really hungry today so you decide to head to the grocery store to buy some supplies to cook some food for yourself. You managed to quickly scrounge together a grocery list to use for keeping yourself focused on buying only what you have written down. There are 15 aisles in the grocery store. In words, how would you go about searching for your groceries?_
 
 ## Psuedocode
 
@@ -77,6 +77,8 @@ _How can we convert the prior psuedocode into actual code?_
 
 - __Code in small snippets and verify it works every step of the way__
   - You will build confidence in your own abilities
+- __Build your code one line at a time__
+  - If you do not understand the line you are writing then do research or ask what the line does
 - __If you are frustrated, take a 5-10 minute break__
   - Those 5-10 minutes now can give you the much needed space to activate your creative right brain
 - __If you have completed your work, try helping others__
@@ -116,31 +118,38 @@ _What algorithm would you use to make a peanut butter and jelly sandwich?_
 - Making a sandwich
 - Cleaning your apt / house
 
-### Algorithms in Code
+### Algorithm Complexity
 
-#### Bubble Sort
+_In computer science, the measurement of algorithm efficiency is determined by using a concept referred to as **time space analysis**. Within time space analysis is the concept of **time complexity.**_
 
-_The __bubble sort__ algorithm makes multiple passes through a list. It compares adjacent items and exchanges those that are out of order. Each pass through the list places the next largest value in its proper place. __In essence, each item “bubbles” up to the location where it belongs.__ This process will take multiple iterations._
+Time complexity is measured by determining the approximate amount of time that an algorithm takes to run based relative to other algorithms.
 
-![Bubble Sort](bubble-sort.gif)
+The notation used for this is called _big O notation or_ `O(n)`. `O` stands for "order of magnitude" and `n` represents what we are comparing the complexity of the task against.
 
-- __Worst-case performance__:	О(n2)
-- __Best-case performance__:	O(n)
-- __Average performance__:	О(n2)
+Examples:
+- `O(1)`
+    - the algorithm can be accomplished in constant time (regardless of the input value)
+    - e.g. finding an element in an array
+- `O(n)`
+    - the runtime of will vary based on the input size `n`
+    - e.g displaying all elements in an array
+- `O(n^2)`
+    - the numbers of steps required to complete this task is equal to the square of its input `n`
+    - e.g. displaying each element of an array each time per the total amount of elements
+- `O(log n)`
+    - the time it takes to execute this algorithm is inversely propoertional to `n`
+    - e.g finding a word in a dictionary
 
-[Chegg Study: Bubble Sort](https://youtu.be/G7VLVAgLhpc)
+#### Types
 
-#### Insertion sort
+An algorithm's complexity is measured in three major cases:
+- Worst case
+- Best case
+- Average case
 
-_**Insertion sort** is a simplistic sorting algorithm that sorts one element at a time. Most humans, when sorting a deck of cards, will use a strategy similar to insertion sort. The algorithm takes an element from the list and places it in the correct location in the list. This process is repeated until there are no more unsorted items in the list._
+[Medium: Algorithm Time Complexity](https://medium.com/@StueyGK/algorithm-time-complexity-and-big-o-notation-51502e612b4d)
 
-![Insertion Sort](insertion-sort.gif)
-
-- __Worst-case performance__:	О(n2)
-- __Best-case performance__:	O(n)
-- __Average performance__:	О(n2)
-
-[CS50: Insertion Sort](https://www.youtube.com/watch?v=kU9M51eKSX8)
+### Search Algorithms Examples
 
 #### Linear search
 
@@ -166,18 +175,35 @@ _**A binary search** locates an item in a sorted array by repeatedly dividing th
 
 [Chegg Study: Binary Search](https://youtu.be/WzV9u3niC-Q)
 
+### Sorting Algorithms Examples
+
+#### Bubble Sort
+
+_The __bubble sort__ algorithm makes multiple passes through a list. It compares adjacent items and exchanges those that are out of order. Each pass through the list places the next largest value in its proper place. __In essence, each item “bubbles” up to the location where it belongs.__ This process will take multiple iterations._
+
+![Bubble Sort](bubble-sort.gif)
+
+- __Worst-case performance__:	О(n^2)
+- __Best-case performance__:	O(n)
+- __Average performance__:	О(n^2)
+
+[Chegg Study: Bubble Sort](https://youtu.be/G7VLVAgLhpc)
+
+#### Insertion sort
+
+_**Insertion sort** is a simplistic sorting algorithm that sorts one element at a time. Most humans, when sorting a deck of cards, will use a strategy similar to insertion sort. The algorithm takes an element from the list and places it in the correct location in the list. This process is repeated until there are no more unsorted items in the list._
+
+![Insertion Sort](insertion-sort.gif)
+
+- __Worst-case performance__:	О(n^2)
+- __Best-case performance__:	O(n)
+- __Average performance__:	О(n^2)
+
+[CS50: Insertion Sort](https://www.youtube.com/watch?v=kU9M51eKSX8)
+
 #### Interesting Article
 
 [Medium: 10 Algorithms that Dominate our World](https://medium.com/@_marcos_otero/the-real-10-algorithms-that-dominate-our-world-e95fa9f16c04)
-
-
-#### Complexity
-
-[Medium: Algorithm Time Complexity](https://medium.com/@StueyGK/algorithm-time-complexity-and-big-o-notation-51502e612b4d)
-
-## Exercise
-
-[Interview Cake: Inflight Entertainment System](https://www.interviewcake.com/question/javascript/inflight-entertainment)
 
 ## Workshop
 

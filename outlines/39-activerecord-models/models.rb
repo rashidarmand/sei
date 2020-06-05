@@ -1,9 +1,9 @@
 require "active_record"
-require "sqlite3"
+require "pg"
 
 ActiveRecord::Base.establish_connection(
-  adapter:  "sqlite3",
-  database: "app.db"
+  adapter:  "postgresql",
+  database: "app"
 )
 
 class User < ActiveRecord::Base
@@ -13,19 +13,14 @@ end
 
 class Profile < ActiveRecord::Base
   belongs_to :user
-
-  def full_name
-    "#{first_name} #{last_name}"
-  end
 end
 
 class Post < ActiveRecord::Base
   belongs_to :user
-end
 
-class Product < ActiveRecord::Base
-  has_many :product_orders
-  has_many :orders, through: :product_orders
+  def title_and_content
+    "#{self.title}, #{self.content}"
+  end
 end
 
 class Order < ActiveRecord::Base
@@ -33,7 +28,12 @@ class Order < ActiveRecord::Base
   has_many :products, through: :product_orders
 end
 
+class Product < ActiveRecord::Base
+  has_many :product_orders
+  has_many :orders, through: :product_orders
+end
+
 class ProductOrder < ActiveRecord::Base
-  belongs_to :product
   belongs_to :order
+  belongs_to :product
 end
